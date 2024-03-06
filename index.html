@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Retro Forum</title>
+</head>
+
+<body>
+
+  <!-- loading spinner -->
+  <div class="loading-screen fixed w-full h-screen flex justify-center items-center bg-[#12132d] z-50 ease-in-out duration-500 transition">
+    <span class="loading loading-bars loading-lg text-white"></span>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar w-full h-40">
+    <div class="theme-container h-full flex justify-between items-center">
+
+      <!-- logo -->
+      <div class="logo">
+        <a href="#"><img src="img/logo.png" alt="" class="w-28"></a>
+      </div>
+
+      <!-- menu -->
+      <div class="menu">
+
+        <!-- menu links -->
+        <ul class="links">
+          <li class="inline-block pr-3">
+            <div class="tooltip hover:bg-transparent px-0" data-tip="Home">
+              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                  class="fa-solid fa-house-chimney"></i></button>
+            </div>
+          </li>
+          <li class="inline-block pr-3">
+            <div class="tooltip hover:bg-transparent px-0" data-tip="Edit account">
+              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                  class="fa-solid fa-pencil"></i></button>
+            </div>
+          </li>
+          <li class="inline-block pr-3">
+            <div class="tooltip hover:bg-transparent px-0" data-tip="Register account">
+              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                  class="fa-solid fa-user-plus"></i></button>
+            </div>
+          </li>
+          <li class="inline-block pr-4">
+            <div class="tooltip hover:bg-transparent px-0" data-tip="Flags">
+              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                  class="fa-solid fa-flag"></i></button>
+            </div>
+          </li>
+          <li class="inline-block">
+            <a href=""
+              class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 hidden md:flex justify-center items-center">sign
+              up</a>
+            <a href=""
+              class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 md:hidden"><i
+                class="fa-solid fa-user-pen"></i></a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- navbar -->
+
+  <!-- home section -->
+  <section class="home-section" id="home">
+    <div class="theme-container">
+      <div class="content h-[750px] lg:h-[550px] w-full relative rounded-2xl overflow-hidden">
+
+        <img src="img/bgbanner.png" alt=""
+          class="w-full h-full bg-[#12132D] bg-opacity-95 pointer-events-none object-cover">
+
+        <!-- content box -->
+        <div
+          class="box absolute w-full h-full top-0 left-0 flex flex-col lg:flex-row justify-between px-4 py-5 lg:px-24 lg:py-28">
+
+          <!-- left content -->
+          <div class="left-content text-center">
+            <h1 class="text-white text-7xl font-black">Welcome to the <span>ReTro</span> Forum</h1>
+            <p class="text-gray-200 pt-5 pb-8 font-medium text-xl">Share your favorite opinion and win and wp forum
+              coffee
+              mug!</p>
+            <div class="join border-5 border-white rounded-full p-2 bg-white">
+              <input class="input join-item text-xl" id="keyword" placeholder="Search anything here" />
+              <button
+                class="btn join-item rounded-full rounded-l-full text-xl font-semibold bg-indigo-400 text-white hover:bg-indigo-400"
+                id="submit-btn">Subscribe</button>
+            </div>
+          </div>
+
+          <!-- right content -->
+          <div class="right-content bg-white rounded-3xl p-12 w-fit h-fit lg:ml-auto">
+            <table>
+              <tr class="font-medium text-2xl">
+                <td class="pr-4 pb-6">Registered Users</td>
+                <td class="pb-6">01</td>
+              </tr>
+              <tr class="font-medium text-2xl">
+                <td class="pr-4 pb-6">Forum</td>
+                <td class="pb-6">05</td>
+              </tr>
+              <tr class="font-medium text-2xl">
+                <td class="pr-4 pb-6">Topics</td>
+                <td class="pb-6">01</td>
+              </tr>
+              <tr class="font-medium text-2xl">
+                <td class="pr-4">Replace</td>
+                <td>01</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- home section -->
+
+  <!-- discuss section -->
+  <section class="discuss-section py-24" id="discuss">
+    <div class="theme-container">
+
+      <!-- title -->
+      <div class="title w-full text-center">
+        <h2 class="text-4xl font-black">Let’s Discuss</h2>
+        <p class="pt-6 font-medium text-[16px]">Yes, you can run unit tests and view the results directly within the
+          app. The <br> integrated testing features allow for a streamlined</p>
+      </div>
+
+      <!-- content box -->
+      <div class="content pt-12 flex flex-col lg:flex-row gap-6">
+        <div class="left-content w-full lg:w-2/3">
+          <!-- generated posts by api -->
+
+        </div>
+
+        <div class="right-content w-full lg:w-1/3">
+          <div class="box bg-gray-200 p-6 rounded-2xl">
+
+            <div class="content-title flex justify-between items-center">
+              <h5 class="font-bold text-xl">Title</h5>
+              <p class="text-gray-400">
+                <span class="text-success"><i class="fa-solid fa-check-double"></i></span>
+                Mark as read (<span id="read-count">0</span>)
+              </p>
+            </div>
+
+            <!-- generated content by api -->
+            <div class="notification"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- discuss section -->
+
+  <!-- join forum -->
+  <section class="join-forum">
+    <div class="theme-container">
+      <div
+        class="content rounded-3xl overflow-hidden w-full h-auto p-6 lg:p-24 bg-[#12132D] flex items-center flex-col lg:flex-row">
+
+        <div class="left-content text-center lg:text-left">
+          <h2 class="uppercase font-black text-[40px] text-white">Join our forum</h2>
+          <p class="text-[18px] text-gray-300 pt-4">Share your favorite opinion and win and wp forum coffee mug! Yes,
+            you can
+            run unit tests and view the results directly
+            within the app.</p>
+          <a href=""
+            class="btn rounded-full mt-8 uppercase text-xl bg-indigo-400 hover:bg-indigo-400 font-bold text-white">register
+            now</a>
+        </div>
+
+        <div class="right-content">
+          <div class="image w-full h-auto mt-7 lg:mt-0"><img src="img/joinforum.png" alt=""
+              class="w-full h-full object-cover object-center"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- join forum -->
+
+  <!-- latest post -->
+  <section class="later-post-section py-24">
+    <div class="theme-container">
+
+      <!-- title -->
+      <div class="title w-full text-center">
+        <h2 class="text-4xl font-black">Latest Post</h2>
+        <p class="pt-6 font-medium text-[16px]">Yes, you can run unit tests and view the results directly within the
+          app. The <br> integrated testing features allow for a streamlined</p>
+      </div>
+
+      <!-- post cards -->
+      <div class="post-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+        <!-- generated cards -->
+      </div>
+
+
+    </div>
+  </section>
+  <!-- latest post -->
+
+
+  <script src="js/scripts.js" type="module"></script>
+
+</body>
+
+</html>
