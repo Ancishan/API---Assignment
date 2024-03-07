@@ -8,6 +8,11 @@
   <!-- custom css -->
   <link rel="stylesheet" href="css/main.css">
 
+  <!-- daisy ui -->
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
   <title>Retro Forum</title>
 </head>
 
@@ -18,59 +23,60 @@
     <span class="loading loading-bars loading-lg text-white"></span>
   </div>
 
-  <!-- navbar -->
-  <nav class="navbar w-full h-40">
-    <div class="theme-container h-full flex justify-between items-center">
+ <!-- navbar start -->
+ <nav class="navbar w-full h-40">
+  <div class="theme-container h-full flex justify-between items-center">
 
-      <!-- logo -->
-      <div class="logo">
-        <a href="#"><img src="img/logo.png" alt="" class="w-28"></a>
-      </div>
+    <!-- logo -->
+    <div class="logo">
+      <a class="text-4xl font-bold" href="">AnchiShan</a>
+      <!-- <a href="#"><img src="img/logo.png" alt="" class="w-28"></a> -->
+    </div>
 
-      <!-- menu -->
-      <div class="menu">
+    <!-- menu -->
+    <div class="menu">
 
-        <!-- menu links -->
-        <ul class="links">
-          <li class="inline-block pr-3">
-            <div class="tooltip hover:bg-transparent px-0" data-tip="Home">
-              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
-                  class="fa-solid fa-house-chimney"></i></button>
-            </div>
-          </li>
-          <li class="inline-block pr-3">
-            <div class="tooltip hover:bg-transparent px-0" data-tip="Edit account">
-              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
-                  class="fa-solid fa-pencil"></i></button>
-            </div>
-          </li>
-          <li class="inline-block pr-3">
-            <div class="tooltip hover:bg-transparent px-0" data-tip="Register account">
-              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
-                  class="fa-solid fa-user-plus"></i></button>
-            </div>
-          </li>
-          <li class="inline-block pr-4">
-            <div class="tooltip hover:bg-transparent px-0" data-tip="Flags">
-              <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
-                  class="fa-solid fa-flag"></i></button>
-            </div>
-          </li>
-          <li class="inline-block">
-            <a href=""
-              class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 hidden md:flex justify-center items-center">sign
-              up</a>
-            <a href=""
-              class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 md:hidden"><i
-                class="fa-solid fa-user-pen"></i></a>
-          </li>
-        </ul>
-
-      </div>
+      <!-- menu links -->
+      <ul class="links">
+        <li class="inline-block pr-3">
+          <div class="tooltip hover:bg-transparent px-0" data-tip="Home">
+            <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                class="fa-solid fa-house-chimney"></i></button>
+          </div>
+        </li>
+        <li class="inline-block pr-3">
+          <div class="tooltip hover:bg-transparent px-0" data-tip="Edit account">
+            <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                class="fa-solid fa-pencil"></i></button>
+          </div>
+        </li>
+        <li class="inline-block pr-3">
+          <div class="tooltip hover:bg-transparent px-0" data-tip="Register account">
+            <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                class="fa-solid fa-user-plus"></i></button>
+          </div>
+        </li>
+        <li class="inline-block pr-4">
+          <div class="tooltip hover:bg-transparent px-0" data-tip="Flags">
+            <button class="btn rounded-full border-gray-300 border-2 overflow-hidden"><i
+                class="fa-solid fa-flag"></i></button>
+          </div>
+        </li>
+        <li class="inline-block">
+          <a href=""
+            class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 hidden md:flex justify-center items-center">sign
+            up</a>
+          <a href=""
+            class="btn btn-md font-bold text-xl bg-indigo-400 text-white uppercase rounded-full hover:bg-indigo-400 md:hidden"><i
+              class="fa-solid fa-user-pen"></i></a>
+        </li>
+      </ul>
 
     </div>
-  </nav>
-  <!-- navbar -->
+
+  </div>
+</nav>
+<!-- navbar end -->
 
   <!-- home section -->
   <section class="home-section" id="home">
@@ -85,17 +91,17 @@
           class="box absolute w-full h-full top-0 left-0 flex flex-col lg:flex-row justify-between px-4 py-5 lg:px-24 lg:py-28">
 
           <!-- left content -->
-          <div class="left-content text-center">
-            <h1 class="text-white text-7xl font-black">Welcome to the <span>ReTro</span> Forum</h1>
+          <div class="left-content">
+            <h1 class="text-white text-7xl font-black">Welcome to the <span class="text-[#010330]">AnchiShan</span> Forum</h1>
             <p class="text-gray-200 pt-5 pb-8 font-medium text-xl">Share your favorite opinion and win and wp forum
               coffee
               mug!</p>
-            <div class="join border-5 border-white rounded-full p-2 bg-white">
-              <input class="input join-item text-xl" id="keyword" placeholder="Search anything here" />
-              <button
-                class="btn join-item rounded-full rounded-l-full text-xl font-semibold bg-indigo-400 text-white hover:bg-indigo-400"
-                id="submit-btn">Subscribe</button>
-            </div>
+              <div class="join border-5 border-white p-1 rounded-full bg-white">
+                <input class="input join-item text-xl" id="keyword" placeholder="Search anything here" />
+                <button
+                  class="btn rounded-l-full pl-8 pr-8 rounded-full text-xl font-semibold bg-indigo-400 text-white hover:bg-indigo-400"
+                  id="submit-btn">Search</button>
+              </div>
           </div>
 
           <!-- right content -->
@@ -213,6 +219,20 @@
     </div>
   </section>
   <!-- latest post -->
+   <!-- footer start -->
+ <footer class="py-8 bg-[#D9D9D9]">
+  <h4 class="text-center pt-8 text-black text-4xl font-bold pb-4">AnchiShan</h4>
+  <p class="text-center pb-5">The World Economic Forum brings together government, businesses and civil society to improve the state of the world</p>
+  <div class="flex justify-center gap-4 pb-12">
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-github"></i></a>  
+  </div>
+  <hr>
+  <p class="text-center pt-8 pb-24">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+</footer>
+<!-- footer end -->
 
 
   <script src="js/scripts.js" type="module"></script>
